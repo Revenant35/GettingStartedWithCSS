@@ -1,0 +1,184 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--magenta);
+}
+
+a:hover {
+  color: var(--hotmag);
+  text-decoration: none;
+}
+
+/* intro styles */
+#intro {
+  padding-bottom: 10rem;
+}
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#intro .name {
+  font-family: var(--mono);
+}
+
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--aqua);
+  display: block;
+}
+
+#intro h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+#contact {
+  background-color: var(--plum);
+  text-align: center;
+  padding: 3rem;
+}
+
+#contact h2 {
+  font-size: var(--font-size);
+}
+
+#contact p{
+  font-size: calc(0.8 * var(--font-size));
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  width: 600px;
+  margin: 0 auto;
+}
+
+footer > * {
+  padding: 0;
+  margin: 0;
+}
+
+footer span {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+footer a {
+  font-size: 175%;
+  text-decoration: none;
+}
+
+footer p {
+  font-size: 75%;
+}
+
+/* navbar */
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 {
+  font-family: var(--sans);
+  font-weight: normal;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav [class*="fa-"] {
+  color: var(--aqua);
+}
+
+nav li > a[class*="fa-"] {
+  font-size: 150%;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav a:hover [class*="fa-"] {
+  color: var(--magenta);
+}
+
+.resume-button {
+  background-color: var(--magenta);
+  border-radius: .25em;
+  padding: 0.25em .5em;
+}
+
+.resume-button:hover {
+  background-color: var(--hotmag);
+  color: var(--white);
+}
+
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
